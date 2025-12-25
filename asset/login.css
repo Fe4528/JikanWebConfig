@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--color-background-lm);
+        color: var(--color-text-lm);
+    }
+
+    .button-normal {
+        background-color: var(--color-button-normal);
+        color: var(--color-text-lm);
+    }
+
+    .button-confirm {
+        background-color: var(--color-button-confirm);
+        color: var(--color-text-lm);
+    }
+
+    .button-danger {
+        background-color: var(--color-button-danger);
+        color: var(--color-text-lm);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-background-dm);
+        color: var(--color-text-dm);
+    }
+
+    .button-normal {
+        background-color: var(--color-button-normal);
+        color: var(--color-text-dm);
+    }
+
+    .button-confirm {
+        background-color: var(--color-button-confirm);
+        color: var(--color-text-dm);
+    }
+
+    .button-danger {
+        background-color: var(--color-button-danger);
+        color: var(--color-text-dm);
+    }
+}

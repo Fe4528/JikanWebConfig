@@ -1,0 +1,204 @@
+:root {
+    /* button stuff */
+    --color-button-normal: #5865F2;
+    --color-button-neutral-lm: #efefef;
+    --color-button-neutral-dm: #3e3f45;
+    --color-button-confirm: #57F287;
+    --color-button-danger: #ED4245;
+
+    --color-button-text: #f6f7ff;
+    --color-neutral-danger-button-text: #c7424c;
+    --color-neutral-text-lm: #3e3f45;
+
+    --button-border-radius: 8px;
+    --button-text-size: medium;
+    --button-padding: 8px 16px;
+    --button-border: 1px solid transparent;
+    --button-hover-transition: background-color 50ms ease-in, color 50ms ease-in, border-color 50ms ease-in, opacity 50ms ease-in;
+    --button_pointer: pointer;
+    --button-max-height: min-content;
+    --button-max-width: 100%;
+    --button-width: min-content;
+
+    /* white mode colors */
+    --color-background-lm: #ffffff;
+    --color-text-lm: #000000;
+
+    /* dark mode colors */
+    --color-background-dm: #18191C;
+    --color-text-dm: #ffffff;
+}
+
+.button_normal:hover {
+    filter: brightness(0.8);
+}
+
+.button_neutral:hover {
+    filter: brightness(0.8);
+}
+
+.button_neutral_danger:hover {
+    filter: brightness(0.8);
+}
+
+.button_confirm:hover {
+    filter: brightness(0.8);
+}
+
+.button_danger:hover {
+    filter: brightness(0.8);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--color-background-lm);
+        color: var(--color-text-lm);
+    }
+
+    .button_normal {
+        background-color: var(--color-button-normal);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_neutral {
+        background-color: var(--color-button-neutral-lm);
+        color: var(--color-neutral-text-lm);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_neutral_danger {
+        background-color: var(--color-button-neutral-lm);
+        color: var(--color-neutral-danger-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_confirm {
+        background-color: var(--color-button-confirm);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_danger {
+        background-color: var(--color-button-danger);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color-background-dm);
+        color: var(--color-text-dm);
+    }
+
+    .button_normal {
+        background-color: var(--color-button-normal);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_neutral {
+        background-color: var(--color-button-neutral-dm);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_neutral_danger {
+        background-color: var(--color-button-neutral-dm);
+        color: var(--color-neutral-danger-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_confirm {
+        background-color: var(--color-button-confirm);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+
+    .button_danger {
+        background-color: var(--color-button-danger);
+        color: var(--color-button-text);
+        border-radius: var(--button-border-radius);
+        font-size: var(--button-text-size);
+        padding: var(--button-padding);
+        border: var(--button-border);
+        transition: var(--button-hover-transition);
+        cursor: var(--button_pointer);
+        max-height: var(--button-max-height);
+        max-width: var(--button-max-width);
+        width: var(--button-width);
+    }
+}
