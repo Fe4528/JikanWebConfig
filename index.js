@@ -21,45 +21,6 @@ app.get('/auth', async (request, response) => {
 	response.redirect(`https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=identify+guilds`);
 });
 
-/*
-app.get('/auth/callback', async (request, response) => {
-	const code = request.query.code;
-
-	if (code == undefined) return response.status(400).send('Invalid content');
-
-	//response.write('Wait...');
-
-	try {
-		const res_data = await undici.request('https://discord.com/api/oauth2/token', {
-			method: 'POST',
-			body: new URLSearchParams({
-				client_id: process.env.CLIENT_ID,
-				client_secret: process.env.CLIENT_SECRET,
-				code,
-				grant_type: 'authorization_code',
-				redirect_uri: `${encodeURIComponent(process.env.REDIRECT_URI)}`,
-				scope: 'identify guilds',
-			}),
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-			},
-		});
-
-		const auth_data = await res_data.body.json();
-		if (auth_data.access_token == undefined) throw new Error('No access token');
-
-		console.log(auth_data);
-		// auth data should be saved server side
-	} catch (error) {
-		return response.status(401).send('401 - Unauthorized');
-	}
-
-	response.send('Redirecting...')
-	// code is for getting an access token from discord	
-	return response.redirect('/dashboard');
-});
-*/
-
 app.get('/auth/callback', async (request, response) => {
 	const code = request.query.code;
 	if (!code) return response.status(400).send('Invalid code');
